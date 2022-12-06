@@ -1,10 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // your code here
-  document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault()
-    buildToDo(e.target.newtaskdescription.value);
-  });
+// document.addEventListener("DOMContentLoaded", () => {
+let btn = document.getElementById("submitData");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let data = document.getElementById("new-task-description").value;
+  buildToDo(data)
+
 });
+
+// your code here
+// document.querySelector("form").addEventListener("submit", (e) => {
+//   e.preventDefault()
+//   // buildToDo(e.targe.value);
+//   console.log(e.target.value)
+// });
+// });
 
 function buildToDo(todo) {
   let p = document.createElement("p");
